@@ -71,25 +71,37 @@
 
 			                    <div class="col-md-8">
 			                    	<h4 class="margin-bottom-15">GET IN TOUCH WITH US</h4>
-									<form action="https://themes247.net/html5/construction-template/demo/includes/contact/contact-process.php" method="post" class="contact-form wpcf7-form">
+                                    @if (session('success'))
+                                    <div class="alert alert-success">
+                                        {{ session('success') }}
+                                    </div>
+                                @endif
+                                @if (session('error'))
+                                    <div class="alert alert-danger">
+                                        {{ session('error') }}
+                                    </div>
+                                @endif
+									<form action="{{ route('contacts.store') }}" method="post" class=" wpcf7-form">
+                                        @csrf
+                                        @method('POST')
 										<div class="wprt-contact-form-1">
 											<span class="wpcf7-form-control-wrap name">
-												<input type="text" tabindex="1" id="name" name="name" value="" class="wpcf7-form-control" placeholder="Name *" required>
+												<input type="text" tabindex="1" name="name" value="" class="wpcf7-form-control" placeholder="Name *" required>
 											</span>
 											<span class="wpcf7-form-control-wrap email">
-												<input type="email" tabindex="2" id="email" name="email" value="" class="wpcf7-form-control" placeholder="E-mail *" required>
+												<input type="email" tabindex="2" name="email" value="" class="wpcf7-form-control" placeholder="E-mail *" required>
 											</span>
 											<span class="wpcf7-form-control-wrap phone">
-												<input type="text" tabindex="3" id="phone" name="phone" value="" class="wpcf7-form-control" placeholder="Phone Number">
+												<input type="number" tabindex="3" name="phone" value="" class="wpcf7-form-control" placeholder="Phone Number">
 											</span>
 											<span class="wpcf7-form-control-wrap subject">
-												<input type="text" tabindex="4" id="subject" name="subject" value="" class="wpcf7-form-control" placeholder="Subject *" required>
+												<input type="text" tabindex="4" name="subject" value="" class="wpcf7-form-control" placeholder="Subject *" required>
 											</span>
 											<span class="wpcf7-form-control-wrap message">
 												<textarea name="message" tabindex="5" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" placeholder="Message" required></textarea>
 											</span>
 											<div class="wrap-submit">
-												<input type="submit" value="SEND MESSAGE" class="submit wpcf7-form-control wpcf7-submit" id="submit" name="submit">
+												<button type="submit" class="submit wpcf7-form-control wpcf7-submit">SEND MESSAGE</button>
 											</div>
 										</div>
 									</form>

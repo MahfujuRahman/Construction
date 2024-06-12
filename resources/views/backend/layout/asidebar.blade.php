@@ -67,7 +67,7 @@
                     <div class="collapse" id="home">
                         <ul class="nav sub-menu">
                             <li class="nav-item">
-                                <a href="#" class="nav-link">Header</a>
+                                <a href="{{ route('header.index') }}" class="nav-link">Header</a>
                             </li>
                             <li class="nav-item">
                                 <a href="#" class="nav-link">Service</a>
@@ -86,6 +86,12 @@
                             </li>
                         </ul>
                     </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route("contacts.index") }}" role="button">
+                        <i class="link-icon" data-feather="user"></i>
+                        <span class="link-title">Contact</span>
+                    </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#" role="button">

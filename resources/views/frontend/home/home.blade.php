@@ -116,7 +116,6 @@
             <div id="site-content" class="site-content clearfix">
                 <div id="inner-content" class="inner-content-wrap">
                     <div class="page-content">
-
                         <!-- Promotion -->
                         <section class="wprt-section promotion">
                             <div class="container">
