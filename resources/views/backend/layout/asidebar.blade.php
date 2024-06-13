@@ -76,7 +76,7 @@
                                 <a href="{{ route("feature.index") }}" class="nav-link">Feature Work</a>
                             </li>
                             <li class="nav-item">
-                                <a href="pages/email/inbox.html" class="nav-link">Testimonial</a>
+                                <a href="{{ route('partner.index') }}" class="nav-link">Partners</a>
                             </li>
                             <li class="nav-item">
                                 <a href="pages/email/inbox.html" class="nav-link">Contact With Us</a>

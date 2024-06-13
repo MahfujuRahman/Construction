@@ -792,55 +792,16 @@
                                         <div class="wprt-partner-grid has-outline col-3 gutter-10">
                                             <div class="partner-wrap clearfix">
                                                 <div class="partner-row clearfix">
-                                                    <div class="partner-item">
-                                                        <div class="inner-item">
-                                                            <a target="_blank" href="#"><img
-                                                                    src="assets/img/partners/1.png"
-                                                                    alt="image" /></a>
-                                                        </div>
-                                                    </div><!-- /.partner-item -->
+                                                    @foreach ($partner as $item)
 
                                                     <div class="partner-item">
                                                         <div class="inner-item">
-                                                            <a target="_blank" href="#"><img
-                                                                    src="assets/img/partners/2.png"
-                                                                    alt="image" /></a>
+                                                            <img src="{{ asset('uploads/home/partner/' . $item->image) }}"
+                                                                        alt="{{ $item->image }}" />
                                                         </div>
                                                     </div><!-- /.partner-item -->
 
-                                                    <div class="partner-item">
-                                                        <div class="inner-item">
-                                                            <a target="_blank" href="#"><img
-                                                                    src="assets/img/partners/3.png"
-                                                                    alt="image" /></a>
-                                                        </div>
-                                                    </div><!-- /.partner-item -->
-                                                </div>
-
-                                                <div class="partner-row clearfix">
-                                                    <div class="partner-item">
-                                                        <div class="inner-item">
-                                                            <a target="_blank" href="#"><img
-                                                                    src="assets/img/partners/4.png"
-                                                                    alt="image" /></a>
-                                                        </div>
-                                                    </div><!-- /.partner-item -->
-
-                                                    <div class="partner-item">
-                                                        <div class="inner-item">
-                                                            <a target="_blank" href="#"><img
-                                                                    src="assets/img/partners/5.png"
-                                                                    alt="image" /></a>
-                                                        </div>
-                                                    </div><!-- /.partner-item -->
-
-                                                    <div class="partner-item">
-                                                        <div class="inner-item">
-                                                            <a target="_blank" href="#"><img
-                                                                    src="assets/img/partners/6.png"
-                                                                    alt="image" /></a>
-                                                        </div>
-                                                    </div><!-- /.partner-item -->
+                                                    @endforeach
                                                 </div>
                                             </div><!-- /.partner-wrap -->
                                         </div><!-- /.wprt-partner-grid -->
