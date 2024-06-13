@@ -82,7 +82,7 @@
                                 <a href="{{ route('about.index') }}" class="nav-link">About Us</a>
                             </li>
                             <li class="nav-item">
-                                <a href="pages/email/inbox.html" class="nav-link">Clients</a>
+                                <a href="{{ route('choose.index') }}" class="nav-link">Why Choose US</a>
                             </li>
                         </ul>
                     </div>

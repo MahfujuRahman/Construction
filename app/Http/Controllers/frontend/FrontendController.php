@@ -8,6 +8,7 @@ use App\Models\Feature;
 use App\Models\Partner;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\WhyChoose;
 
 class FrontendController extends Controller
 {
@@ -16,7 +17,8 @@ class FrontendController extends Controller
         $feature = Feature::all();
         $partner = Partner::all();
         $about = About::all();
-        return view('frontend.home.home', compact('headers','feature','partner', 'about'));
+        $choose = WhyChoose::all();
+        return view('frontend.home.home', compact('headers','feature','partner', 'about','choose'));
     }
     public function blog(){
         return view('frontend.blog');

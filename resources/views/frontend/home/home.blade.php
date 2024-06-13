@@ -523,48 +523,16 @@
                                         <div class="wprt-spacer" data-desktop="50" data-mobi="40" data-smobi="40">
                                         </div>
 
-                                        <div class="wprt-toggle style-1">
-                                            <h3 class="toggle-title">We have 30 plus years in the building industry
-                                            </h3>
-                                            <div class="toggle-content">Lorem ipsum dolor sit amet, consectetur
-                                                adipiscing elit. In a metus pellentesque, scelerisque ex sed, volutpat
-                                                nisi. Curabitur tortor mi, eleifend ornare lobortis non. Nulla porta
-                                                purus quis iaculis ultrices. Proin aliquam sem at nibh hendrerit
-                                                sagittis. Nullam ornare odio eu lacus tincidunt malesuada. Sed eu
-                                                vestibulum elit. Curabitur tortor mi, eleifend ornare.</div>
-                                        </div>
+                                        @foreach ($choose as $item)
 
-                                        <div class="wprt-toggle active style-1">
-                                            <h3 class="toggle-title">Quality construction continues after the project
-                                            </h3>
-                                            <div class="toggle-content">Lorem ipsum dolor sit amet, consectetur
-                                                adipiscing elit. In a metus pellentesque, scelerisque ex sed, volutpat
-                                                nisi. Curabitur tortor mi, eleifend ornare lobortis non. Nulla porta
-                                                purus quis iaculis ultrices. Proin aliquam sem at nibh hendrerit
-                                                sagittis. Nullam ornare odio eu lacus tincidunt malesuada. Sed eu
-                                                vestibulum elit. Curabitur tortor mi, eleifend ornare.</div>
-                                        </div>
 
                                         <div class="wprt-toggle style-1">
-                                            <h3 class="toggle-title">We use technology to do the job more quickly</h3>
-                                            <div class="toggle-content">Lorem ipsum dolor sit amet, consectetur
-                                                adipiscing elit. In a metus pellentesque, scelerisque ex sed, volutpat
-                                                nisi. Curabitur tortor mi, eleifend ornare lobortis non. Nulla porta
-                                                purus quis iaculis ultrices. Proin aliquam sem at nibh hendrerit
-                                                sagittis. Nullam ornare odio eu lacus tincidunt malesuada. Sed eu
-                                                vestibulum elit. Curabitur tortor mi, eleifend ornare.</div>
-                                        </div>
-
-                                        <div class="wprt-toggle style-1">
-                                            <h3 class="toggle-title">Employees are continually trained on safety issues
+                                            <h3 class="toggle-title">{{ $item->title }}
                                             </h3>
-                                            <div class="toggle-content">Lorem ipsum dolor sit amet, consectetur
-                                                adipiscing elit. In a metus pellentesque, scelerisque ex sed, volutpat
-                                                nisi. Curabitur tortor mi, eleifend ornare lobortis non. Nulla porta
-                                                purus quis iaculis ultrices. Proin aliquam sem at nibh hendrerit
-                                                sagittis. Nullam ornare odio eu lacus tincidunt malesuada. Sed eu
-                                                vestibulum elit. Curabitur tortor mi, eleifend ornare.</div>
+                                            <div class="toggle-content">{{ $item->sub_title }}</div>
                                         </div>
+                                        @endforeach
+
                                     </div><!-- /.col-md-6 -->
 
                                     <div class="col-md-6">
