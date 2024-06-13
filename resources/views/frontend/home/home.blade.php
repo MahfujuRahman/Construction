@@ -582,38 +582,23 @@
                                             data-margin="10">
                                             <div id="wprt-slider" class="flexslider">
                                                 <ul class="slides">
-                                                    <li class="flex-active-slide">
-                                                        <a class="zoom" href="assets/img/gallery/1.jpg"><i
-                                                                class="fa fa-arrows-alt"></i></a>
-                                                        <img src="assets/img/gallery/1.jpg" alt="image" />
-                                                    </li>
-
-                                                    <li class="flex-active-slide">
-                                                        <a class="zoom" href="assets/img/gallery/2.jpg"><i
-                                                                class="fa fa-arrows-alt"></i></a>
-                                                        <img src="assets/img/gallery/2.jpg" alt="image" />
-                                                    </li>
-
-                                                    <li class="flex-active-slide">
-                                                        <a class="zoom" href="assets/img/gallery/3.jpg"><i
-                                                                class="fa fa-arrows-alt"></i></a>
-                                                        <img src="assets/img/gallery/3.jpg" alt="image" />
-                                                    </li>
-
-                                                    <li class="flex-active-slide">
-                                                        <a class="zoom" href="assets/img/gallery/4.jpg"><i
-                                                                class="fa fa-arrows-alt"></i></a>
-                                                        <img src="assets/img/gallery/4.jpg" alt="image" />
-                                                    </li>
+                                                    @foreach ($about as $item)
+                                                        <li class="flex-active-slide">
+                                                            <a class="zoom"
+                                                                href="{{ asset('uploads/home/about/' . $item->image) }}"><i
+                                                                    class="fa fa-arrows-alt"></i></a>
+                                                            <img src="{{ asset('uploads/home/about/' . $item->image) }}"
+                                                                alt="{{ $item->image }}" />
+                                                        </li>
+                                                    @endforeach
                                                 </ul>
                                             </div>
-
                                             <div id="wprt-carousel" class="flexslider">
                                                 <ul class="slides">
-                                                    <li><img src="assets/img/gallery/1-s.jpg" alt="image"></li>
-                                                    <li><img src="assets/img/gallery/2-s.jpg" alt="image"></li>
-                                                    <li><img src="assets/img/gallery/3-s.jpg" alt="image"></li>
-                                                    <li><img src="assets/img/gallery/4-s.jpg" alt="image"></li>
+                                                    @foreach ($about as $item)
+                                                        <li><img src="{{ asset('uploads/home/about/' . $item->image) }}"
+                                                                alt="image"></li>
+                                                    @endforeach
                                                 </ul>
                                             </div>
                                         </div>
@@ -793,14 +778,12 @@
                                             <div class="partner-wrap clearfix">
                                                 <div class="partner-row clearfix">
                                                     @foreach ($partner as $item)
-
-                                                    <div class="partner-item">
-                                                        <div class="inner-item">
-                                                            <img src="{{ asset('uploads/home/partner/' . $item->image) }}"
-                                                                        alt="{{ $item->image }}" />
-                                                        </div>
-                                                    </div><!-- /.partner-item -->
-
+                                                        <div class="partner-item">
+                                                            <div class="inner-item">
+                                                                <img src="{{ asset('uploads/home/partner/' . $item->image) }}"
+                                                                    alt="{{ $item->image }}" />
+                                                            </div>
+                                                        </div><!-- /.partner-item -->
                                                     @endforeach
                                                 </div>
                                             </div><!-- /.partner-wrap -->

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\backend\AboutController;
 use App\Http\Controllers\backend\HeaderController;
 use App\Http\Controllers\backend\ContactController;
 use App\Http\Controllers\backend\FeatureController;
@@ -28,6 +29,7 @@ Route::resource('/header', HeaderController::class)->middleware('auth');
 Route::resource('/contacts', ContactController::class)->middleware('auth');
 Route::resource('/feature', FeatureController::class)->middleware('auth');
 Route::resource('/partner', PartnerController::class)->middleware('auth');
+Route::resource('/about', AboutController::class)->middleware('auth');
 
 Route::get('/site-settings', [HomeController::class, 'index'])->name('siteSetting.index')->middleware('auth');
 Route::post('/site-settings', [HomeController::class, 'store'])->name('siteSetting.store')->middleware('auth');

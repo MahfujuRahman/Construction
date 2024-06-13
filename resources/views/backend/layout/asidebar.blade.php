@@ -79,7 +79,7 @@
                                 <a href="{{ route('partner.index') }}" class="nav-link">Partners</a>
                             </li>
                             <li class="nav-item">
-                                <a href="pages/email/inbox.html" class="nav-link">Contact With Us</a>
+                                <a href="{{ route('about.index') }}" class="nav-link">About Us</a>
                             </li>
                             <li class="nav-item">
                                 <a href="pages/email/inbox.html" class="nav-link">Clients</a>
