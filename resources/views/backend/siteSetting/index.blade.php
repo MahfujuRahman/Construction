@@ -13,15 +13,8 @@
                     </div>
 
                     <div class="card-body">
-
-                        <div class="col-md-12 text-start">
-                            <a href="{{ route('admin.index') }}" class="btn btn-secondary">
-                                <i class="link-icon" data-feather="chevron-left"></i>
-                            </a>
-                        </div>
                         <form action="{{ route('siteSetting.store') }}" method="POST" enctype="multipart/form-data">
                             @csrf
-
                             <div class="row mb-3 mt-5">
                                 <label for="logo"
                                     class="col-md-2 col-form-label text-md-center">{{ __('Logo') }}</label>

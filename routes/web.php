@@ -23,4 +23,7 @@ Route::get('/contact', [FrontendController::class, 'contact'])->name('contact');
 
 Route::get('/dashboard', [FrontendDynamicController::class, 'index'])->name('dashboard')->middleware('auth');
 Route::resource('/header', HeaderController::class)->middleware('auth');
-Route::resource('/contacts', ContactController::class);
+Route::resource('/contacts', ContactController::class)->middleware('auth');
+
+Route::get('/site-settings', [HomeController::class, 'index'])->name('siteSetting.index')->middleware('auth');
+Route::post('/site-settings', [HomeController::class, 'store'])->name('siteSetting.store')->middleware('auth');

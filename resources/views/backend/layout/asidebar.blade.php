@@ -102,7 +102,7 @@
 
                 <li class="nav-item nav-category">Settings</li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="{{ route("siteSetting.index") }}">
                         <i class="link-icon" data-feather="settings"></i>
                         <span class="link-title">Site Settings</span>
                     </a>

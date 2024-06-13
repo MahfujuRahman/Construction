@@ -8,10 +8,14 @@
                     <div class="inner">
                         <span class="icons">
                             <a href="#" title="Twitter"><span class="fa fa-twitter" aria-hidden="true"></span></a>
-                            <a href="#" title="Facebook"><span class="fa fa-facebook" aria-hidden="true"></span></a>
-                            <a href="#" title="Google Plus"><span class="fa fa-google-plus" aria-hidden="true"></span></a>
-                            <a href="#" title="Pinterest"><span class="fa fa-pinterest" aria-hidden="true"></span></a>
-                            <a href="#" title="Dribbble"><span class="fa fa-dribbble" aria-hidden="true"></span></a>
+                            <a href="#" title="Facebook"><span class="fa fa-facebook"
+                                    aria-hidden="true"></span></a>
+                            <a href="#" title="Google Plus"><span class="fa fa-google-plus"
+                                    aria-hidden="true"></span></a>
+                            <a href="#" title="Pinterest"><span class="fa fa-pinterest"
+                                    aria-hidden="true"></span></a>
+                            <a href="#" title="Dribbble"><span class="fa fa-dribbble"
+                                    aria-hidden="true"></span></a>
                         </span>
                     </div>
                 </div><!-- /.top-bar-socials -->
@@ -33,9 +37,15 @@
             <div class="wrap-inner">
                 <div id="site-logo" class="clearfix">
                     <div id="site-logo-inner">
-                        <a href="{{ route('home') }}" title="Construction" rel="home" class="main-logo">
-                            <img src="assets/img/logo.png" alt="Construction" data-retina="assets/img/logo@2x.png" data-width="200" data-height="30">
-                        </a>
+                        @if (isset($icon->logo))
+                            <img src="{{ asset('uploads/settings/icon/' . $icon->logo) }}" alt="Villa"
+                                style="width:50px">
+                        @else
+                            <a href="{{ route('home') }}" title="Construction" rel="home" class="main-logo">
+                                <img src="assets/img/logo.png" alt="Construction" data-retina="assets/img/logo@2x.png"
+                                    data-width="200" data-height="30">
+                            </a>
+                        @endif
                     </div>
                 </div><!-- /#site-logo -->
 
@@ -43,9 +53,12 @@
 
                 <nav id="main-nav" class="main-nav nav-top-cart-wrapper" style="right:0; !important">
                     <ul class="menu">
-                        <li class="menu-item {{ Request::routeIs('home') ? 'current-menu-item' : '' }}"><a href="{{ route('home') }}">Home</a></li>
-                        <li class="menu-item {{ Request::routeIs('blog') ? 'current-menu-item' : '' }}"><a href="{{ route('blog') }}">Blog</a></li>
-                        <li class="menu-item {{ Request::routeIs('contact') ? 'current-menu-item' : '' }}"><a href="{{ route('contact') }}">Contact</a></li>
+                        <li class="menu-item {{ Request::routeIs('home') ? 'current-menu-item' : '' }}"><a
+                                href="{{ route('home') }}">Home</a></li>
+                        <li class="menu-item {{ Request::routeIs('blog') ? 'current-menu-item' : '' }}"><a
+                                href="{{ route('blog') }}">Blog</a></li>
+                        <li class="menu-item {{ Request::routeIs('contact') ? 'current-menu-item' : '' }}"><a
+                                href="{{ route('contact') }}">Contact</a></li>
                     </ul>
                     </ul>
                 </nav><!-- /#main-nav -->

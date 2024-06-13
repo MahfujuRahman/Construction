@@ -18,9 +18,16 @@
     <!-- Theme Style -->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
 
+
+
+    <!-- End layout styles -->
+    @if (isset($fav->favicon))
+    <link rel="icon" type="image/x-icon" href="{{ asset('uploads/settings/fav/' . $fav->favicon) }}">
+    @else
     <!-- Favicon and touch icons  -->
     <link rel="shortcut icon" href="assets/icon/favicon.png">
     <link rel="apple-touch-icon-precomposed" href="assets/icon/apple-touch-icon-158-precomposed.png">
+    @endif
 
 </head>
 

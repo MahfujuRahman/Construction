@@ -5,9 +5,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-    {{-- <meta name="description" content="{{ $fav?->description }}">
+    <meta name="description" content="{{ $fav?->description }}">
 	<meta name="author" content="{{ $fav?->author_name }}">
-	<meta name="keywords" content="{{ $fav?->keywords }}"> --}}
+	<meta name="keywords" content="{{ $fav?->keywords }}">
     <meta name="csrf-token" content="{{ csrf_token() }}" />
 
     <title>@yield('title', 'Admin Panel')</title>
@@ -42,13 +42,6 @@
     <!-- Layout styles -->
     <link rel="stylesheet" href="{{ asset('asset/css/demo1/style.css') }}">
     <link href="{{ asset('asset/css/sweetalert2.min.css') }}" rel="stylesheet">
-
-    <!-- End layout styles -->
-    @if (isset($fav->favicon))
-        <link rel="icon" type="image/x-icon" href="{{ asset($fav->favicon) }}">
-    @else
-        <link rel="shortcut icon" href="{{ asset("images/favicon.png") }}" />
-    @endif
 
     <!-- End layout styles -->
     @if (isset($fav->favicon))
