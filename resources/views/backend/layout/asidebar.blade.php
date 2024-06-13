@@ -70,10 +70,10 @@
                                 <a href="{{ route('header.index') }}" class="nav-link">Header</a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link">Service</a>
+                                <a href="#" class="nav-link">Main Service</a>
                             </li>
                             <li class="nav-item">
-                                <a href="pages/email/inbox.html" class="nav-link">Explore</a>
+                                <a href="{{ route("feature.index") }}" class="nav-link">Feature Work</a>
                             </li>
                             <li class="nav-item">
                                 <a href="pages/email/inbox.html" class="nav-link">Testimonial</a>

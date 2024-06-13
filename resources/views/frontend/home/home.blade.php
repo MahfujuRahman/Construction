@@ -6,109 +6,115 @@
 @section('content')
 
 @section('body')
-<body class="front-page no-sidebar site-layout-full-width header-style-1 menu-has-search menu-has-cart header-sticky">
-@endsection
+
+    <body class="front-page no-sidebar site-layout-full-width header-style-1 menu-has-search menu-has-cart header-sticky">
+    @endsection
 
     @foreach ($headers as $header)
-    <!-- Slider -->
-    <div class="rev_slider_wrapper fullwidthbanner-container">
-        <div id="rev-slider2" class="rev_slider fullwidthabanner">
-            <ul>
-                <!-- Slide -->
-                <li data-transition="random">
-                    <!-- Main Image -->
-                    <img src="{{ asset('uploads/home/header/' . $header->thumbnail)}}" alt="" data-bgposition="center center" data-bgfit="cover"
-                        data-bgrepeat="no-repeat" data-no-retina>
-                    <!-- Layers -->
-                    <div class="sfb tp-caption tp-resizeme text-white font-family-heading text-shadow text-center font-weight-700 letter-spacing-2px"
-                        data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
-                        data-y="['middle','middle','middle','middle']" data-voffset="['-90','-90','-90','-90']"
-                        data-fontsize="['58','54','50','46']" data-lineheight="['68','64','60','56']" data-width="none"
-                        data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="o:0"
-                        data-transform_out="o:0" data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
-                        data-mask_out="x:0;y:0;s:inherit;e:inherit;" data-start="1500" data-splitin="none"
-                        data-splitout="none" data-responsive_offset="on">
-                        {{ $header->title1 }}
-                    </div>
-                    <div class="sfb tp-caption tp-resizeme text-white text-shadow text-center"
-                        data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
-                        data-y="['middle','middle','middle','middle']" data-voffset="['-14','-14','-14','-14']"
-                        data-fontsize="['16','16','16','16']" data-lineheight="['30','30','30','28']" data-width="none"
-                        data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="o:0"
-                        data-transform_out="o:0" data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
-                        data-mask_out="x:0;y:0;s:inherit;e:inherit;" data-start="1800" data-splitin="none"
-                        data-splitout="none" data-responsive_offset="on" data-lasttriggerstate="reset">
-                        {{ $header->short_title1 }}
-                    </div>
-                    <div class="sfb tp-caption" data-x="['center','center','center','center']"
-                        data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']"
-                        data-voffset="['83','83','83','83']" data-width="none" data-height="none"
-                        data-whitespace="nowrap" data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;"
-                        data-style_hover="c:rgba(255, 255, 255, 1.00);bc:rgba(255, 255, 255, 1.00);cursor:pointer;"
-                        data-transform_idle="o:1;" data-transform_in="o:0" data-transform_out="o:0"
-                        data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="2100" data-splitin="none"
-                        data-splitout="none" data-actions='[{"event":"click","action":"scrollbelow","offset":"20px"}]'
-                        data-responsive="on">
-                        <a href="{{ route('contact') }}" class="wprt-button rounded-3px">GET A QUOTE</a>
-                    </div>
-                </li>
-                <!-- End Slide -->
+        <!-- Slider -->
+        <div class="rev_slider_wrapper fullwidthbanner-container">
+            <div id="rev-slider2" class="rev_slider fullwidthabanner">
+                <ul>
+                    <!-- Slide -->
+                    <li data-transition="random">
+                        <!-- Main Image -->
+                        <img src="{{ asset('uploads/home/header/' . $header->thumbnail) }}" alt=""
+                            data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-no-retina>
+                        <!-- Layers -->
+                        <div class="sfb tp-caption tp-resizeme text-white font-family-heading text-shadow text-center font-weight-700 letter-spacing-2px"
+                            data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                            data-y="['middle','middle','middle','middle']" data-voffset="['-90','-90','-90','-90']"
+                            data-fontsize="['58','54','50','46']" data-lineheight="['68','64','60','56']"
+                            data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;"
+                            data-transform_in="o:0" data-transform_out="o:0"
+                            data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:0;y:0;s:inherit;e:inherit;"
+                            data-start="1500" data-splitin="none" data-splitout="none" data-responsive_offset="on">
+                            {{ $header->title1 }}
+                        </div>
+                        <div class="sfb tp-caption tp-resizeme text-white text-shadow text-center"
+                            data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                            data-y="['middle','middle','middle','middle']" data-voffset="['-14','-14','-14','-14']"
+                            data-fontsize="['16','16','16','16']" data-lineheight="['30','30','30','28']"
+                            data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;"
+                            data-transform_in="o:0" data-transform_out="o:0"
+                            data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:0;y:0;s:inherit;e:inherit;"
+                            data-start="1800" data-splitin="none" data-splitout="none" data-responsive_offset="on"
+                            data-lasttriggerstate="reset">
+                            {{ $header->short_title1 }}
+                        </div>
+                        <div class="sfb tp-caption" data-x="['center','center','center','center']"
+                            data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']"
+                            data-voffset="['83','83','83','83']" data-width="none" data-height="none"
+                            data-whitespace="nowrap"
+                            data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;"
+                            data-style_hover="c:rgba(255, 255, 255, 1.00);bc:rgba(255, 255, 255, 1.00);cursor:pointer;"
+                            data-transform_idle="o:1;" data-transform_in="o:0" data-transform_out="o:0"
+                            data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="2100"
+                            data-splitin="none" data-splitout="none"
+                            data-actions='[{"event":"click","action":"scrollbelow","offset":"20px"}]'
+                            data-responsive="on">
+                            <a href="{{ route('contact') }}" class="wprt-button rounded-3px">GET A QUOTE</a>
+                        </div>
+                    </li>
+                    <!-- End Slide -->
 
-                <!-- Slide -->
-                <li data-transition="random">
-                    <!-- Main Image -->
-                    <img src="{{ asset('uploads/home/header/' . $header->thumbnail2)}}" alt="" data-bgposition="center center" data-no-retina>
-                    <!-- Layers -->
-                    <div class="sfb tp-caption tp-resizeme text-white font-family-heading text-shadow font-weight-700 letter-spacing-2px"
-                        data-x="['left','left','left','left']" data-hoffset="['30','30','30','30']"
-                        data-y="['middle','middle','middle','middle']" data-voffset="['-110','-110','-110','-110']"
-                        data-fontsize="['58','54','50','46']" data-lineheight="['68','64','60','56']" data-width="none"
-                        data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="o:0"
-                        data-transform_out="o:0" data-mask_in="x:0px;y:0px;" data-mask_out="x:inherit;y:inherit;"
-                        data-start="1500" data-splitin="none" data-splitout="none" data-responsive_offset="on">
-                        {{ $header->title2 }}
-                    </div>
-                    <div class="sfb tp-caption tp-resizeme text-white text-shadow"
-                        data-x="['left','left','left','left']" data-hoffset="['30','30','30','30']"
-                        data-y="['middle','middle','middle','middle']" data-voffset="['-34','-34','-34','-34']"
-                        data-fontsize="['16','16','16','16']" data-lineheight="['30','30','30','28']" data-width="none"
-                        data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;"
-                        data-transform_in="o:0" data-transform_out="o:0" data-start="1800" data-splitin="none"
-                        data-splitout="none" data-responsive_offset="on" data-lasttriggerstate="reset">
-                        {{ $header->short_title2 }}
-                    </div>
-                    <div class="sfb tp-caption" data-x="['left','left','left','left']"
-                        data-hoffset="['30','30','30','30']" data-y="['middle','middle','middle','middle']"
-                        data-voffset="['63','63','63','63']" data-width="none" data-height="none"
-                        data-whitespace="nowrap"
-                        data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;"
-                        data-style_hover="c:rgba(255, 255, 255, 1.00);bc:rgba(255, 255, 255, 1.00);cursor:pointer;"
-                        data-transform_idle="o:1;" data-transform_in="o:0" data-transform_out="o:0"
-                        data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="2100"
-                        data-splitin="none" data-splitout="none"
-                        data-actions='[{"event":"click","action":"scrollbelow","offset":"20px"}]'
-                        data-responsive="on">
-                        <a href="#portfolio" class="wprt-button rounded-3px">OUR PORTFOLIO</a>
-                    </div>
-                    <div class="sfb tp-caption" data-x="['left','left','left','left']"
-                        data-hoffset="['240','230','230','220']" data-y="['middle','middle','middle','middle']"
-                        data-voffset="['63','63','63','63']" data-width="none" data-height="none"
-                        data-whitespace="nowrap"
-                        data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;"
-                        data-style_hover="c:rgba(255, 255, 255, 1.00);bc:rgba(255, 255, 255, 1.00);cursor:pointer;"
-                        data-transform_idle="o:1;" data-transform_in="o:0" data-transform_out="o:0"
-                        data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="2200"
-                        data-splitin="none" data-splitout="none"
-                        data-actions='[{"event":"click","action":"scrollbelow","offset":"20px"}]'
-                        data-responsive="on">
-                        <a href="{{ route('contact') }}" class="wprt-button outline rounded-3px">CONTACT US</a>
-                    </div>
-                </li>
-                <!-- End Slide -->
-            </ul>
-            <div class="tp-bannertimer tp-bottom"></div>
+                    <!-- Slide -->
+                    <li data-transition="random">
+                        <!-- Main Image -->
+                        <img src="{{ asset('uploads/home/header/' . $header->thumbnail2) }}" alt=""
+                            data-bgposition="center center" data-no-retina>
+                        <!-- Layers -->
+                        <div class="sfb tp-caption tp-resizeme text-white font-family-heading text-shadow font-weight-700 letter-spacing-2px"
+                            data-x="['left','left','left','left']" data-hoffset="['30','30','30','30']"
+                            data-y="['middle','middle','middle','middle']" data-voffset="['-110','-110','-110','-110']"
+                            data-fontsize="['58','54','50','46']" data-lineheight="['68','64','60','56']"
+                            data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;"
+                            data-transform_in="o:0" data-transform_out="o:0" data-mask_in="x:0px;y:0px;"
+                            data-mask_out="x:inherit;y:inherit;" data-start="1500" data-splitin="none"
+                            data-splitout="none" data-responsive_offset="on">
+                            {{ $header->title2 }}
+                        </div>
+                        <div class="sfb tp-caption tp-resizeme text-white text-shadow"
+                            data-x="['left','left','left','left']" data-hoffset="['30','30','30','30']"
+                            data-y="['middle','middle','middle','middle']" data-voffset="['-34','-34','-34','-34']"
+                            data-fontsize="['16','16','16','16']" data-lineheight="['30','30','30','28']"
+                            data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;"
+                            data-transform_in="o:0" data-transform_out="o:0" data-start="1800" data-splitin="none"
+                            data-splitout="none" data-responsive_offset="on" data-lasttriggerstate="reset">
+                            {{ $header->short_title2 }}
+                        </div>
+                        <div class="sfb tp-caption" data-x="['left','left','left','left']"
+                            data-hoffset="['30','30','30','30']" data-y="['middle','middle','middle','middle']"
+                            data-voffset="['63','63','63','63']" data-width="none" data-height="none"
+                            data-whitespace="nowrap"
+                            data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;"
+                            data-style_hover="c:rgba(255, 255, 255, 1.00);bc:rgba(255, 255, 255, 1.00);cursor:pointer;"
+                            data-transform_idle="o:1;" data-transform_in="o:0" data-transform_out="o:0"
+                            data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="2100"
+                            data-splitin="none" data-splitout="none"
+                            data-actions='[{"event":"click","action":"scrollbelow","offset":"20px"}]'
+                            data-responsive="on">
+                            <a href="#portfolio" class="wprt-button rounded-3px">OUR PORTFOLIO</a>
+                        </div>
+                        <div class="sfb tp-caption" data-x="['left','left','left','left']"
+                            data-hoffset="['240','230','230','220']" data-y="['middle','middle','middle','middle']"
+                            data-voffset="['63','63','63','63']" data-width="none" data-height="none"
+                            data-whitespace="nowrap"
+                            data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;"
+                            data-style_hover="c:rgba(255, 255, 255, 1.00);bc:rgba(255, 255, 255, 1.00);cursor:pointer;"
+                            data-transform_idle="o:1;" data-transform_in="o:0" data-transform_out="o:0"
+                            data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="2200"
+                            data-splitin="none" data-splitout="none"
+                            data-actions='[{"event":"click","action":"scrollbelow","offset":"20px"}]'
+                            data-responsive="on">
+                            <a href="{{ route('contact') }}" class="wprt-button outline rounded-3px">CONTACT US</a>
+                        </div>
+                    </li>
+                    <!-- End Slide -->
+                </ul>
+                <div class="tp-bannertimer tp-bottom"></div>
+            </div>
         </div>
-    </div>
     @endforeach
     <!-- Main Content -->
     <div id="main-content" class="site-main clearfix">
@@ -275,201 +281,221 @@
                                         <div class="wprt-project arrow-style-2 has-arrows arrow60 arrow-dark"
                                             data-layout="slider" data-column="3" data-column2="3" data-column3="2"
                                             data-column4="1" data-gaph="30" data-gapv="30">
-                                            <div id="projects" class="cbp">
-                                                <div class="cbp-item">
-                                                    <div class="project-item">
-                                                        <div class="inner">
-                                                            <div class="grid">
-                                                                <figure class="effect-sadie">
-                                                                    <img src="assets/img/projects/1.jpg"
-                                                                        alt="image" />
+                                            <div id="projects" class="cbp">\
+                                                @if (isset($feature[0]->image))
+                                                    <div class="cbp-item">
+                                                        <div class="project-item">
+                                                            <div class="inner">
+                                                                <div class="grid">
+                                                                    <figure class="effect-sadie">
+                                                                        <img src="{{ asset('uploads/home/feature/' . $feature[0]->image) }}"
+                                                                            alt="{{ $feature[0]->image }}">
+                                                                        <figcaption>
+                                                                            <div>
+                                                                                <h2><a target="_blank"
+                                                                                        href="page-project-detail.html">{{ $feature[0]->title }}</a>
+                                                                                </h2>
+                                                                                <p>{{ $feature[0]->sub_title }}</p>
+                                                                            </div>
+                                                                        </figcaption>
+                                                                    </figure>
+                                                                </div>
+
+                                                                <a class="project-zoom cbp-lightbox"
+                                                                    href="assets/img/projects/1-full.jpg"
+                                                                    data-title="LUXURY BUILDINGS">
+                                                                    <i class="fa fa-arrows-alt"></i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div><!--/.cbp-item -->
+                                                @endif
+
+                                                @if (isset($feature[1]->image))
+                                                    <div class="cbp-item">
+                                                        <div class="project-item">
+                                                            <div class="inner">
+                                                                <figure class="effect-honey">
+
+                                                                    <img src="{{ asset('uploads/home/feature/' . $feature[1]->image) }}"
+                                                                        alt="{{ $feature[1]->image }}" />
                                                                     <figcaption>
                                                                         <div>
                                                                             <h2><a target="_blank"
-                                                                                    href="page-project-detail.html">LUXURY
-                                                                                    BUILDINGS</a></h2>
-                                                                            <p>Construction</p>
+                                                                                    href="page-project-detail.html">{{ $feature[1]->title }}</a>
+                                                                            </h2>
+                                                                            <p>{{ $feature[1]->sub_title }}</p>
+                                                                        </div>
+                                                                    </figcaption>
+
+                                                                </figure>
+
+                                                                <a class="project-zoom cbp-lightbox"
+                                                                    href="assets/img/projects/2-full.jpg"
+                                                                    data-title="LUXURY BUILDINGS">
+                                                                    <i class="fa fa-arrows-alt"></i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div><!--/.cbp-item -->
+                                                @endif
+
+                                                @if (isset($feature[2]->image))
+                                                    <div class="cbp-item">
+                                                        <div class="project-item">
+                                                            <div class="inner">
+                                                                <figure class="effect-zoe">
+                                                                    <img src="{{ asset('uploads/home/feature/' . $feature[2]->image) }}"
+                                                                        alt="{{ $feature[2]->image }}" />
+                                                                    <figcaption>
+                                                                        <div>
+                                                                            <h2><a target="_blank"
+                                                                                    href="page-project-detail.html">{{ $feature[2]->title }}</a>
+                                                                            </h2>
+                                                                            <p>{{ $feature[2]->sub_title }}</p>
                                                                         </div>
                                                                     </figcaption>
                                                                 </figure>
+
+                                                                <a class="project-zoom cbp-lightbox"
+                                                                    href="assets/img/projects/3-full.jpg"
+                                                                    data-title="LUXURY BUILDINGS">
+                                                                    <i class="fa fa-arrows-alt"></i>
+                                                                </a>
                                                             </div>
-
-                                                            <a class="project-zoom cbp-lightbox"
-                                                                href="assets/img/projects/1-full.jpg"
-                                                                data-title="LUXURY BUILDINGS">
-                                                                <i class="fa fa-arrows-alt"></i>
-                                                            </a>
                                                         </div>
-                                                    </div>
-                                                </div><!--/.cbp-item -->
+                                                    </div><!--/.cbp-item -->
+                                                @endif
+                                                @if (isset($feature[3]->image))
+                                                    <div class="cbp-item">
+                                                        <div class="project-item">
+                                                            <div class="inner">
+                                                                <figure class="effect-sadie">
+                                                                    <img src="{{ asset('uploads/home/feature/' . $feature[3]->image) }}"
+                                                                        alt="{{ $feature[3]->image }}" />
+                                                                    <figcaption>
+                                                                        <div>
+                                                                            <h2><a target="_blank"
+                                                                                    href="page-project-detail.html">{{ $feature[3]->title }}</a>
+                                                                            </h2>
+                                                                            <p>{{ $feature[3]->sub_title }}</p>
+                                                                        </div>
+                                                                    </figcaption>
+                                                                </figure>
 
-                                                <div class="cbp-item">
-                                                    <div class="project-item">
-                                                        <div class="inner">
-                                                            <figure class="effect-honey">
-                                                                <img src="assets/img/projects/2.jpg" alt="image" />
-                                                                <figcaption>
-                                                                    <div>
-                                                                        <h2><a target="_blank"
-                                                                                href="page-project-detail-2.html">LUXURY
-                                                                                BUILDINGS</a></h2>
-                                                                        <p>Construction</p>
-                                                                    </div>
-                                                                </figcaption>
-                                                            </figure>
-
-                                                            <a class="project-zoom cbp-lightbox"
-                                                                href="assets/img/projects/2-full.jpg"
-                                                                data-title="LUXURY BUILDINGS">
-                                                                <i class="fa fa-arrows-alt"></i>
-                                                            </a>
+                                                                <a class="project-zoom cbp-lightbox"
+                                                                    href="assets/img/projects/4-full.jpg"
+                                                                    data-title="LUXURY BUILDINGS">
+                                                                    <i class="fa fa-arrows-alt"></i>
+                                                                </a>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                </div><!--/.cbp-item -->
+                                                    </div><!--/.cbp-item -->
+                                                @endif
+                                                @if (isset($feature[4]->image))
+                                                    <div class="cbp-item">
+                                                        <div class="project-item">
+                                                            <div class="inner">
+                                                                <figure class="effect-oscar">
+                                                                    <img src="{{ asset('uploads/home/feature/' . $feature[4]->image) }}"
+                                                                        alt="{{ $feature[4]->image }}" />
+                                                                    <figcaption>
+                                                                        <div>
+                                                                            <h2><a target="_blank"
+                                                                                    href="page-project-detail.html">{{ $feature[4]->title }}</a>
+                                                                            </h2>
+                                                                            <p>{{ $feature[4]->sub_title }}</p>
+                                                                        </div>
+                                                                    </figcaption>
+                                                                </figure>
 
-                                                <div class="cbp-item">
-                                                    <div class="project-item">
-                                                        <div class="inner">
-                                                            <figure class="effect-zoe">
-                                                                <img src="assets/img/projects/3.jpg" alt="image" />
-                                                                <figcaption>
-                                                                    <div>
-                                                                        <h2><a target="_blank"
-                                                                                href="page-project-detail-3.html">LUXURY
-                                                                                BUILDINGS</a></h2>
-                                                                        <p>Construction</p>
-                                                                    </div>
-                                                                </figcaption>
-                                                            </figure>
-
-                                                            <a class="project-zoom cbp-lightbox"
-                                                                href="assets/img/projects/3-full.jpg"
-                                                                data-title="LUXURY BUILDINGS">
-                                                                <i class="fa fa-arrows-alt"></i>
-                                                            </a>
+                                                                <a class="project-zoom cbp-lightbox"
+                                                                    href="assets/img/projects/5-full.jpg"
+                                                                    data-title="LUXURY BUILDINGS">
+                                                                    <i class="fa fa-arrows-alt"></i>
+                                                                </a>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                </div><!--/.cbp-item -->
+                                                    </div><!--/.cbp-item -->
+                                                @endif
+                                                @if (isset($feature[5]->image))
+                                                    <div class="cbp-item">
+                                                        <div class="project-item">
+                                                            <div class="inner">
+                                                                <figure class="effect-zoe">
+                                                                    <img src="{{ asset('uploads/home/feature/' . $feature[5]->image) }}"
+                                                                        alt="{{ $feature[5]->image }}" />
+                                                                    <figcaption>
+                                                                        <div>
+                                                                            <h2><a target="_blank"
+                                                                                    href="page-project-detail.html">{{ $feature[5]->title }}</a>
+                                                                            </h2>
+                                                                            <p>{{ $feature[5]->sub_title }}</p>
+                                                                        </div>
+                                                                    </figcaption>
+                                                                </figure>
 
-                                                <div class="cbp-item">
-                                                    <div class="project-item">
-                                                        <div class="inner">
-                                                            <figure class="effect-sadie">
-                                                                <img src="assets/img/projects/4.jpg" alt="image" />
-                                                                <figcaption>
-                                                                    <div>
-                                                                        <h2><a target="_blank"
-                                                                                href="page-project-detail-4.html">LUXURY
-                                                                                BUILDINGS</a></h2>
-                                                                        <p>Construction</p>
-                                                                    </div>
-                                                                </figcaption>
-                                                            </figure>
-
-                                                            <a class="project-zoom cbp-lightbox"
-                                                                href="assets/img/projects/4-full.jpg"
-                                                                data-title="LUXURY BUILDINGS">
-                                                                <i class="fa fa-arrows-alt"></i>
-                                                            </a>
+                                                                <a class="project-zoom cbp-lightbox"
+                                                                    href="assets/img/projects/6-full.jpg"
+                                                                    data-title="LUXURY BUILDINGS">
+                                                                    <i class="fa fa-arrows-alt"></i>
+                                                                </a>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                </div><!--/.cbp-item -->
+                                                    </div><!--/.cbp-item -->
+                                                @endif
+                                                @if (isset($feature[6]->image))
+                                                    <div class="cbp-item">
+                                                        <div class="project-item">
+                                                            <div class="inner">
+                                                                <figure class="effect-oscar">
+                                                                    <img src="{{ asset('uploads/home/feature/' . $feature[6]->image) }}"
+                                                                        alt="{{ $feature[6]->image }}" />
+                                                                    <figcaption>
+                                                                        <div>
+                                                                            <h2><a target="_blank"
+                                                                                    href="page-project-detail.html">{{ $feature[6]->title }}</a>
+                                                                            </h2>
+                                                                            <p>{{ $feature[6]->sub_title }}</p>
+                                                                        </div>
+                                                                    </figcaption>
+                                                                </figure>
 
-                                                <div class="cbp-item">
-                                                    <div class="project-item">
-                                                        <div class="inner">
-                                                            <figure class="effect-oscar">
-                                                                <img src="assets/img/projects/5.jpg" alt="image" />
-                                                                <figcaption>
-                                                                    <div>
-                                                                        <h2><a target="_blank"
-                                                                                href="page-project-detail.html">LUXURY
-                                                                                BUILDINGS</a></h2>
-                                                                        <p>Construction</p>
-                                                                    </div>
-                                                                </figcaption>
-                                                            </figure>
-
-                                                            <a class="project-zoom cbp-lightbox"
-                                                                href="assets/img/projects/5-full.jpg"
-                                                                data-title="LUXURY BUILDINGS">
-                                                                <i class="fa fa-arrows-alt"></i>
-                                                            </a>
+                                                                <a class="project-zoom cbp-lightbox"
+                                                                    href="assets/img/projects/7-full.jpg"
+                                                                    data-title="LUXURY BUILDINGS">
+                                                                    <i class="fa fa-arrows-alt"></i>
+                                                                </a>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                </div><!--/.cbp-item -->
+                                                    </div><!--/.cbp-item -->
+                                                @endif
+                                                @if (isset($feature[7]->image))
+                                                    <div class="cbp-item">
+                                                        <div class="project-item">
+                                                            <div class="inner">
+                                                                <figure class="effect-sadie">
+                                                                    <img src="{{ asset('uploads/home/feature/' . $feature[7]->image) }}"
+                                                                        alt="{{ $feature[7]->image }}" />
+                                                                    <figcaption>
+                                                                        <div>
+                                                                            <h2><a target="_blank"
+                                                                                    href="page-project-detail.html">{{ $feature[7]->title }}</a>
+                                                                            </h2>
+                                                                            <p>{{ $feature[7]->sub_title }}</p>
+                                                                        </div>
+                                                                    </figcaption>
+                                                                </figure>
 
-                                                <div class="cbp-item">
-                                                    <div class="project-item">
-                                                        <div class="inner">
-                                                            <figure class="effect-zoe">
-                                                                <img src="assets/img/projects/6.jpg" alt="image" />
-                                                                <figcaption>
-                                                                    <div>
-                                                                        <h2><a target="_blank"
-                                                                                href="page-project-detail-2.html">LUXURY
-                                                                                BUILDINGS</a></h2>
-                                                                        <p>Construction</p>
-                                                                    </div>
-                                                                </figcaption>
-                                                            </figure>
-
-                                                            <a class="project-zoom cbp-lightbox"
-                                                                href="assets/img/projects/6-full.jpg"
-                                                                data-title="LUXURY BUILDINGS">
-                                                                <i class="fa fa-arrows-alt"></i>
-                                                            </a>
+                                                                <a class="project-zoom cbp-lightbox"
+                                                                    href="assets/img/projects/8-full.jpg"
+                                                                    data-title="LUXURY BUILDINGS">
+                                                                    <i class="fa fa-arrows-alt"></i>
+                                                                </a>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                </div><!--/.cbp-item -->
-
-                                                <div class="cbp-item">
-                                                    <div class="project-item">
-                                                        <div class="inner">
-                                                            <figure class="effect-oscar">
-                                                                <img src="assets/img/projects/7.jpg" alt="image" />
-                                                                <figcaption>
-                                                                    <div>
-                                                                        <h2><a target="_blank"
-                                                                                href="page-project-detail-2.html">LUXURY
-                                                                                BUILDINGS</a></h2>
-                                                                        <p>Construction</p>
-                                                                    </div>
-                                                                </figcaption>
-                                                            </figure>
-
-                                                            <a class="project-zoom cbp-lightbox"
-                                                                href="assets/img/projects/7-full.jpg"
-                                                                data-title="LUXURY BUILDINGS">
-                                                                <i class="fa fa-arrows-alt"></i>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div><!--/.cbp-item -->
-
-                                                <div class="cbp-item">
-                                                    <div class="project-item">
-                                                        <div class="inner">
-                                                            <figure class="effect-sadie">
-                                                                <img src="assets/img/projects/8.jpg" alt="image" />
-                                                                <figcaption>
-                                                                    <div>
-                                                                        <h2><a target="_blank"
-                                                                                href="page-project-detail-2.html">LUXURY
-                                                                                BUILDINGS</a></h2>
-                                                                        <p>Construction</p>
-                                                                    </div>
-                                                                </figcaption>
-                                                            </figure>
-
-                                                            <a class="project-zoom cbp-lightbox"
-                                                                href="assets/img/projects/8-full.jpg"
-                                                                data-title="LUXURY BUILDINGS">
-                                                                <i class="fa fa-arrows-alt"></i>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div><!--/.cbp-item -->
+                                                    </div><!--/.cbp-item -->
+                                                @endif
                                             </div><!-- /#projects -->
                                         </div><!--/.wprt-project -->
                                     </div><!-- /.col-md-12 -->
@@ -711,7 +737,8 @@
                                             The Construction Company</h2>
                                         <h3
                                             class="text-right text-center-mobile text-white font-family-heading font-size-70 line-height-normal margin-bottom-20 letter-spacing-1px">
-                                            <strong>AWESOME FACTS</strong></h3>
+                                            <strong>AWESOME FACTS</strong>
+                                        </h3>
                                     </div><!-- /.col-md-8 -->
                                     <div class="col-md-6">
                                     </div><!-- /.col-md-6 -->
@@ -918,7 +945,8 @@
 
         <!-- Revolution Slider -->
         <script type="text/javascript" src="{{ asset('includes/rev-slider/js/jquery.themepunch.tools.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('includes/rev-slider/js/jquery.themepunch.revolution.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('includes/rev-slider/js/jquery.themepunch.revolution.min.js') }}">
+        </script>
         <script type="text/javascript" src="{{ asset('assets/js/rev-slider.js') }}"></script>
         <!-- Load Extensions only on Local File Systems ! The following part can be removed on Server for On Demand Loading -->
         <script type="text/javascript"
