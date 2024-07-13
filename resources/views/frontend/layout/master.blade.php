@@ -10,7 +10,7 @@
     <title>Construction - Construction Company, Building Company Template</title>
     <meta name="description" content="Template built for Construction Company, Building Services, Architecture, Engineering, Cleaning Service and other Construction related services">
     <meta name="keywords" content=" architecture, builder, building, building company, cleaning services, construction, construction business, construction company">
-    <meta name="author" content="blogwp.com">
+    <meta name="author" content="S. M. Mahfujur Rahman">
 
     <!-- Mobile Specific Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
